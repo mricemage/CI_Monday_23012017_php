@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>CI Example</title>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/mystyle.css'); ?> ">
 </head>
 <body>
 
