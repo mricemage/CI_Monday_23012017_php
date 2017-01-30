@@ -49,17 +49,17 @@ class Customer extends CI_Controller {
 				$id_customers=$this->input->post('id');
 				$rows=0; //Calculate Row
 				foreach($id_customers as $a) {
-					$rows++;
+				$rows++; }
 					//update database row by row
 				for ($x=0; $x < $rows; $x++ ) {
 						$update_data=array(
 							"fname"=>$a_fname[$x],
 							"lname"=>$a_lname[$x]
-						);
+				); 
 						$this->Customer_model->updateCustomer($update_data, $id_customers[$x]);
 					}
+		}
 					
-				}		
 		$data['customers']=$this->Customer_model->getCustomers();
 		$data['page']='customer/update_customers';
 		$this->load->view('menu/content', $data);
